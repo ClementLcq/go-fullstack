@@ -38,6 +38,7 @@ app.use((req, res, next) => {
 
 app.use('/api/stuff', stuffRoutes);
 app.use('/api/auth', userRoutes);
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // Et on exporte l'app pour y accéder depuis les autres fichiers, notamment notre server node
 
